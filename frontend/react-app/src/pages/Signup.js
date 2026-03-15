@@ -7,5 +7,25 @@ export default function Signup(){
     const[name,setName]=useState("")
     const[email,setEmail]=useState("")
     const [password,setPassword]=useState("")
-    const {login}= 
+    const {login}= useContext(AuthContext)
+    const nav = useNavigate()
+    const submit = async()=>{
+        const res = await API.post("/auth/signup",{
+            name, 
+            email,
+            password,
+        })
+        login(res.data.token)
+        nav("/")
+    }
+    return(
+        <div>
+            <h2>Signup</h2>
+            <input placeholder="name" onChange={(e)=>setName(e.target.value)}/>
+            <input placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
+            <input placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
+            <button onClick={submit}>Signup</button>
+            
+        </div>
+    )
 }
