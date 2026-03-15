@@ -12,7 +12,6 @@ import AuthProvider  from "./context/AuthContext";
     <AuthProvider>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signup />} />
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
