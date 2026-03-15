@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Login(){
     const [email,setEmail]=useState("")
-    const [oassword,setPassword]=useState("")
+    const [password,setPassword]=useState("")
     const {login}= useContext(AuthContext) 
     const nav = useNavigate()
     const submit =async()=>{
