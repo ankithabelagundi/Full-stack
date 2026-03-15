@@ -13,6 +13,7 @@ export default function Login(){
             email,
             password,
         })
+         console.log(res.data);
         login(res.data.token)
         nav("/")
     }
@@ -20,7 +21,7 @@ export default function Login(){
         <div>
             <h2>Login</h2>
             <input placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
-            <input placeholder="password" onChange={(e)=>setEmail(e.target.value)}/>
+            <input placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
             <button onClick={submit}>Login</button>
 
 

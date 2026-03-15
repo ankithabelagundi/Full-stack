@@ -12,14 +12,15 @@ export const signup = async(req,res)=>{
         {
             id:uuid(),
             name,
-            email,password:hash,
+            email,
+            password:hash,
             balance:10000,
         },
     ])
     .select()
     if (error) return res.json(error)
         const token = generateToken(data[0].id)
-    res.jsn({token})
+    res.json({token})
     
 }
 

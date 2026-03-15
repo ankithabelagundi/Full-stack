@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Dashboard(){
     const [balance,setBalance]=useState(0)
     useEffect(()=>{
-        API.get("/account/ba;ance").then((res)=>{
+        API.get("/account/balance").then((res)=>{
             setBalance(res.data.balance)
         })
     },[])

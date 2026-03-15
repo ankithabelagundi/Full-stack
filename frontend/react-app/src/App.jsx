@@ -12,9 +12,10 @@ import { AuthProvider } from "./context/AuthContext";
     <AuthProvider>
       <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Signup />} />
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
         <Route path="/send" element={<PrivateRoute><SendMoney/></PrivateRoute>}/>
 <Route path="/statement" element={<PrivateRoute><Statement/></PrivateRoute>}/>
       </Routes>

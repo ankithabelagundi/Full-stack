@@ -26,7 +26,7 @@ export default function SendMoney() {
                 ))}
             </select>
             <input placeholder="amount" onChange={(e)=>setAmount(e.target.value)}/>
-            <button onclick={send}>Send</button>
+            <button onClick={send}>Send</button>
         </div>
     )
 }
