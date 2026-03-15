@@ -1,9 +1,9 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Login from "./pages/Login"
-import Login from "./pages/Dashboard"
-import Login from "./pages/Signup"
-import Login from "./pages/SendMoney"
-import Login from "./pages/Statement"
+import Dashboard from "./pages/Dashboard"
+import Signup from "./pages/Signup"
+import SendMoney from "./pages/SendMoney"
+import Statement from "./pages/Statement"
 
 import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
@@ -12,8 +12,8 @@ import { AuthProvider } from "./context/AuthContext";
     <AuthProvider>
       <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
         <Route path="/send" element={<PrivateRoute><SendMoney/></PrivateRoute>}/>
 <Route path="/statement" element={<PrivateRoute><Statement/></PrivateRoute>}/>
