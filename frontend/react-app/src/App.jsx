@@ -6,7 +6,7 @@ import SendMoney from "./pages/SendMoney"
 import Statement from "./pages/Statement"
 
 import PrivateRoute from "./components/PrivateRoute";
-import { AuthProvider } from "./context/AuthContext";
+import AuthProvider  from "./context/AuthContext";
  function App(){
   return(
     <AuthProvider>
